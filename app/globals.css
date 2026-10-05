@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.schoolbuddy-markdown {
+  line-height: 1.75;
+}
+
+.schoolbuddy-markdown h1,
+.schoolbuddy-markdown h2,
+.schoolbuddy-markdown h3,
+.schoolbuddy-markdown h4 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.schoolbuddy-markdown p {
+  margin-bottom: 0.9rem;
+}
+
+.schoolbuddy-markdown ul,
+.schoolbuddy-markdown ol {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.schoolbuddy-markdown li {
+  margin-bottom: 0.35rem;
+}
+
+.schoolbuddy-markdown strong {
+  font-weight: 700;
+}
+
+.schoolbuddy-markdown code {
+  border-radius: 0.35rem;
+  padding: 0.15rem 0.3rem;
+  background: rgba(127, 127, 127, 0.15);
+}
+
+.schoolbuddy-markdown pre {
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  background: rgba(127, 127, 127, 0.12);
+}
+
+.schoolbuddy-markdown .katex-display {
+  overflow-x: auto;
+  padding: 0.75rem 0;
+}
